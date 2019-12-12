@@ -1,0 +1,25 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.3.61' apply false
+}
+
+group 'org.example'
+version '1.0.0'
+
+subprojects {
+
+    repositories {
+        mavenCentral()
+    }
+
+    if (it.pluginManager.hasPlugin("org.jetbrains.kotlin.jvm")) {
+        sourceCompatibility = 1.8
+
+        kotlinCompile {
+            kotlinOptions.jvmTarget = "1.8"
+        }
+        kotlinTestCompile {
+            kotlinOptions.jvmTarget = "1.8"
+        }
+    }
+
+}

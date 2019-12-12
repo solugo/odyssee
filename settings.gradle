@@ -1,0 +1,5 @@
+rootProject.name = 'odyssee'
+
+include(":odyssee-api")
+include(":odyssee-runner")
+
